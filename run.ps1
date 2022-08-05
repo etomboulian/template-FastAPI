@@ -1,0 +1,1 @@
+uvicorn mms.main:app --reload
