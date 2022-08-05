@@ -6,7 +6,7 @@ from pathlib import Path
 from mms.core.config import settings
 from mms.api.v1 import api_router
 from mms.db import engine
-from mms.initialize_app import main as initialize
+from mms.init_app import main as init_app
 
 BASE_PATH = Path(__file__).resolve().parent # Directory of main.py
 ROOT_PATH = BASE_PATH.parent                # Root project directory
@@ -16,7 +16,7 @@ TEMPLATES = Jinja2Templates(directory=f"{BASE_PATH}/templates")
 # usage: return TEMPLATES.TemplateResponse(template_file_name: str, data: dict)
 
 app = FastAPI()
-initialize()
+init_app()
 
 root_router = APIRouter()
 
