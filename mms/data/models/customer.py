@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String
 from mms.db import Base
 from mms.db import CRUDBase
-from mms.schemas import Customer, CustomerCreate, CustomerUpdate
+from mms.data.schemas import Customer, CustomerCreate, CustomerUpdate
 
 class Customer(Base):
     __tablename__ = 'customers'

@@ -2,9 +2,9 @@ from typing import Optional
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import PlainTextResponse, JSONResponse
-from mms.models.customer import customer
+from mms.data.models.customer import customer
+from mms.data.schemas.customer import CustomerCreate, CustomerUpdate
 from mms.core.dependencies import get_db
-from mms.schemas.customer import CustomerCreate, CustomerUpdate
 
 router = APIRouter()
 
